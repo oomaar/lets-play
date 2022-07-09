@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 const NavContainer = styled.nav`
-  position: fixed;
-  inset: 0;
-  bottom: unset;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 0.5rem 4rem;
+  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.3);
 `;
 
 const NavLinksList = styled.ul`
