@@ -7,8 +7,8 @@ export default function Home() {
       <HeroContainer>
         <Image
           src="/react-light.png"
-          width={100}
-          height={100}
+          width={500}
+          height={400}
           objectFit="contain"
         />
         <h2>React Challenges</h2>
