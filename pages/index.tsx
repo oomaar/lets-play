@@ -1,16 +1,22 @@
 import Image from "next/image";
-import { Container, HeroContainer } from "../global/styledPages/styledIndex";
+import {
+  Container,
+  HeroContainer,
+  LogoContainer,
+} from "../global/styledPages/styledIndex";
 
 export default function Home() {
   return (
     <Container>
       <HeroContainer>
-        <Image
-          src="/react-light.png"
-          width={500}
-          height={400}
-          objectFit="contain"
-        />
+        <LogoContainer>
+          <Image
+            src="/react-light.png"
+            width={500}
+            height={400}
+            objectFit="contain"
+          />
+        </LogoContainer>
         <h2>React Challenges</h2>
       </HeroContainer>
     </Container>
