@@ -1,10 +1,11 @@
+import Image from "next/image";
+import Link from "next/link";
 import {
   NavContainer,
   LogoContainer,
   NavLink,
   NavLinksList,
 } from "./styledNavbar";
-import Image from "next/image";
 
 export const Navbar = () => {
   return (
@@ -14,7 +15,9 @@ export const Navbar = () => {
       </LogoContainer>
       <NavLinksList>
         <NavLink>
-          <a>Calculator</a>
+          <Link href="/calculator">
+            <a>Calculator</a>
+          </Link>
         </NavLink>
         <NavLink>
           <a>TODO</a>
