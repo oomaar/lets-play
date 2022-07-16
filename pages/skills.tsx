@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import {
   Container,
   DerivedStateContainer,
@@ -14,7 +14,10 @@ const Skills = () => {
     { id: 4, name: "Ahmed", age: 31 },
   ]);
   const [selectedUserId, setSelectedUserId] = useState<number | null>();
-  const selectedUser = users.find((user) => user.id === selectedUserId);
+  const selectedUser = useMemo(
+    () => users.find((user) => user.id === selectedUserId),
+    [users, selectedUserId]
+  );
 
   function incrementAge(id) {
     setUsers((currectUser) => {
