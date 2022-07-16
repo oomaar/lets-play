@@ -25,6 +25,11 @@ export const Navbar = () => {
         <NavLink>
           <a>Weather</a>
         </NavLink>
+        <NavLink>
+          <Link href="/skills">
+            <a>Skills</a>
+          </Link>
+        </NavLink>
       </NavLinksList>
     </NavContainer>
   );
