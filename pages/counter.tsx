@@ -1,12 +1,17 @@
 import type { NextPage } from "next";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../app/store";
+import { decrement, increment } from "../slices/CounterSlice";
 import {
   Container,
   SubContainer,
   Title,
 } from "../global/styledPages/styledSkills";
-import { decrement, increment } from "../slices/CounterSlice";
+import {
+  CounterContainer,
+  DecrementButton,
+  IncrementButton,
+} from "../global/styledPages/styledCounter";
 
 const Counter: NextPage = () => {
   const count = useSelector((state: RootState) => state.counter.value);
@@ -17,11 +22,17 @@ const Counter: NextPage = () => {
       <SubContainer>
         <Title>Counter with redux</Title>
 
-        <div>
-          <h1>The value of count is {count}</h1>
-          <button onClick={() => dispatch(increment())}>+</button>
-          <button onClick={() => dispatch(decrement())}>-</button>
-        </div>
+        <CounterContainer>
+          <IncrementButton onClick={() => dispatch(increment())}>
+            +
+          </IncrementButton>
+          <p>
+            The value of count is <span>{count}</span>
+          </p>
+          <DecrementButton onClick={() => dispatch(decrement())}>
+            -
+          </DecrementButton>
+        </CounterContainer>
       </SubContainer>
     </Container>
   );
