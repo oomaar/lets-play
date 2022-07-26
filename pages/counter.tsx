@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../app/store";
-import { decrement, increment } from "../slices/CounterSlice";
+import { decrement, increment, selectValue } from "../slices/CounterSlice";
 import {
   Container,
   SubContainer,
@@ -14,7 +13,7 @@ import {
 } from "../global/styledPages/styledCounter";
 
 const Counter: NextPage = () => {
-  const count = useSelector((state: RootState) => state.counter.value);
+  const count = useSelector(selectValue);
   const dispatch = useDispatch();
 
   return (
