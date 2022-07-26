@@ -30,6 +30,11 @@ export const Navbar = () => {
             <a>Skills</a>
           </Link>
         </NavLink>
+        <NavLink>
+          <Link href="/counter">
+            <a>Counter</a>
+          </Link>
+        </NavLink>
       </NavLinksList>
     </NavContainer>
   );
