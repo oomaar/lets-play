@@ -22,15 +22,15 @@ const Counter: NextPage = () => {
         <Title>Counter with redux</Title>
 
         <CounterContainer>
-          <IncrementButton onClick={() => dispatch(increment())}>
-            +
-          </IncrementButton>
-          <p>
-            The value of count is <span>{count}</span>
-          </p>
           <DecrementButton onClick={() => dispatch(decrement())}>
             -
           </DecrementButton>
+          <p>
+            The value of count is <span>{count}</span>
+          </p>
+          <IncrementButton onClick={() => dispatch(increment())}>
+            +
+          </IncrementButton>
         </CounterContainer>
       </SubContainer>
     </Container>
